@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.restart).setOnClickListener(View ->restart());
+        ((TextView) findViewById(R.id.player_turn_text)).setText("Player O's Turn");
     }
 
     public void click(View view)
@@ -26,12 +27,14 @@ public class MainActivity extends AppCompatActivity {
             btn.setText("O");
             btn.setEnabled(false);
             flag=1;
+            ((TextView)findViewById(R.id.player_turn_text)).setText("Player X's Turn");
         }
         else
         {
             btn.setText("X");
             flag=0;
             btn.setEnabled(false);
+            ((TextView)findViewById(R.id.player_turn_text)).setText("Player O's Turn");
         }
         winningpattern();
     }
