@@ -2,19 +2,11 @@ package com.vinay.tictactoe;
 
 import android.app.Dialog;
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
 public class MainActivity extends AppCompatActivity {
     Dialog dialog;
     public AppCompatButton btn[]=new AppCompatButton[9];
@@ -24,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.restart).setOnClickListener(View ->restart());
-
     }
 
     public void click(View view)
